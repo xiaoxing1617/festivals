@@ -29,18 +29,18 @@
   ],
   "work": ["01-28", "01-29", "04-23", "05-06", "06-25", "10-07", "10-08"],
   "festivals": {
-    "01-05": {
+    "01-05": [{
       "as": "xiaohan",
       "name": "小寒",
       "en": "Slight Cold",
       "solar_terms_order": 23
-    },
-    "01-21": {
+    }],
+    "01-21": [{
       "as": "chuxi",
       "name": "除夕夜",
       "en": "New Year's Eve"
-    },
-    "01-22": {
+    }],
+    "01-22": [{
       "as": "chunjie",
       "name": "春节",
       "en": "Spring Festival"
@@ -50,187 +50,187 @@
       "name": "立春",
       "en": "Beginning of Spring",
       "solar_terms_order": 1
-    },
-    "02-05": {
+    }],
+    "02-05": [{
       "as": "yuanxiao",
       "name": "元宵节",
       "en": "Lantern Festival"
-    },
-    "02-19": {
+    }],
+    "02-19": [{
       "as": "yushui",
       "name": "雨水",
       "en": "Rainwater",
       "solar_terms_order": 2
-    },
-    "02-21": {
+    }],
+    "02-21": [{
       "as": "longtou",
       "name": "龙头节",
       "en": "Dragon Head Festival"
-    },
-    "03-06": {
+    }],
+    "03-06": [{
       "as": "jingzhe",
       "name": "惊蛰",
       "en": "Awakening of Insects",
       "solar_terms_order": 3
-    },
-    "03-21": {
+    }],
+    "03-21": [{
       "as": "chunfen",
       "name": "春分",
       "en": "Spring Equinox",
       "solar_terms_order": 4
-    },
-    "04-05": {
+    }],
+    "04-05": [{
       "as": "qingming",
       "name": "清明节",
       "en": "Tomb Sweeping Day",
       "solar_terms_order": 5
-    },
-    "04-09": {
+    }],
+    "04-09": [{
       "as": "fuhuojie",
       "name": "复活节",
       "en": "Easter"
-    },
-    "04-20": {
+    }],
+    "04-20": [{
       "as": "guyu",
       "name": "谷雨",
       "en": "Grain Rain",
       "solar_terms_order": 6
-    },
-    "05-06": {
+    }],
+    "05-06": [{
       "as": "lixia",
       "name": "立夏",
       "en": "Beginning of Summer",
       "solar_terms_order": 7
-    },
-    "05-14": {
+    }],
+    "05-14": [{
       "as": "muqinjie",
       "name": "母亲节",
       "en": "Mother's Day"
-    },
-    "05-21": {
+    }],
+    "05-21": [{
       "as": "xiaoman",
       "name": "小满",
       "en": "Grain Buds",
       "solar_terms_order": 8
-    },
-    "06-06": {
+    }],
+    "06-06": [{
       "as": "mangzhong",
       "name": "芒种",
       "en": "Grain in Ear",
       "solar_terms_order": 9
-    },
-    "06-18": {
+    }],
+    "06-18": [{
       "as": "fuqinjie",
       "name": "父亲节",
       "en": "Father's Day"
-    },
-    "06-21": {
+    }],
+    "06-21": [{
       "as": "xiazhi",
       "name": "夏至",
       "en": "Summer Solstice",
       "solar_terms_order": 10
-    },
-    "06-22": {
+    }],
+    "06-22": [{
       "as": "duanwu",
       "name": "端午节",
       "en": "Dragon Boat Festival"
-    },
-    "07-07": {
+    }],
+    "07-07": [{
       "as": "xiaoshu",
       "name": "小暑",
       "en": "Slight Heat",
       "solar_terms_order": 11
-    },
-    "07-23": {
+    }],
+    "07-23": [{
       "as": "dashu",
       "name": "大暑",
       "en": "Major Heat",
       "solar_terms_order": 12
-    },
-    "08-08": {
+    }],
+    "08-08": [{
       "as": "liqiu",
       "name": "立秋",
       "en": "Beginning of Autumn",
       "solar_terms_order": 13
-    },
-    "08-22": {
+    }],
+    "08-22": [{
       "as": "qixi",
       "name": "七夕节",
       "en": "Qixi Festival"
-    },
-    "08-23": {
+    }],
+    "08-23": [{
       "as": "chushu",
       "name": "处暑",
       "en": "End of Heat",
       "solar_terms_order": 14
-    },
-    "08-30": {
+    }],
+    "08-30": [{
       "as": "zhongyuanjie",
       "name": "中元节",
       "en": "Zhongyuan Festival"
-    },
-    "09-08": {
+    }],
+    "09-08": [{
       "as": "bailu",
       "name": "白露",
       "en": "White dew",
       "solar_terms_order": 15
-    },
-    "09-23": {
+    }],
+    "09-23": [{
       "as": "qiufen",
       "name": "秋分",
       "en": "Autumnal equinox",
       "solar_terms_order": 16
-    },
-    "09-29": {
+    }],
+    "09-29": [{
       "as": "zhongqiu",
       "name": "中秋节",
       "en": "Mid-Autumn Festival"
-    },
-    "10-08": {
+    }],
+    "10-08": [{
       "as": "hanshuang",
       "name": "寒霜",
       "en": "Frost",
       "solar_terms_order": 17
-    },
-    "10-23": {
+    }],
+    "10-23": [{
       "as": "chongyang",
       "name": "重阳节",
       "en": "Double Ninth Festival"
-    },
-    "10-24": {
+    }],
+    "10-24": [{
       "as": "shuangjiang",
       "name": "霜降",
       "en": "Frost drop",
       "solar_terms_order": 18
-    },
-    "11-08": {
+    }],
+    "11-08": [{
       "as": "lidong",
       "name": "立冬",
       "en": "Beginning of Winter",
       "solar_terms_order": 19
-    },
-    "11-22": {
+    }],
+    "11-22": [{
       "as": "xiaoxue",
       "name": "小雪",
       "en": "Light Snow",
       "solar_terms_order": 20
-    },
-    "11-23": {
+    }],
+    "11-23": [{
       "as": "ganenjie",
       "name": "感恩节",
       "en": "Thanksgiving Day"
-    },
-    "12-07": {
+    }],
+    "12-07": [{
       "as": "daxue",
       "name": "大雪",
       "en": "Major Snow",
       "solar_terms_order": 21
-    },
-    "12-22": {
+    }],
+    "12-22": [{
       "as": "dongzhi",
       "name": "冬至",
       "en": "Winter Solstice",
       "solar_terms_order": 22
-    }
+    }]
   }
 }
