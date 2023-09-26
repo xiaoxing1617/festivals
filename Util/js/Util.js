@@ -46,6 +46,7 @@ export default class Util {
    * @return {Array}
    */
   getFestivalNameArray(date) {
+    if (!this.festivals[date]) return [];
     return this.festivals[date].map((obj) => obj.name);
   }
   /**
