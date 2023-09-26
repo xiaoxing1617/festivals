@@ -11,13 +11,23 @@ export default class Util {
     this.yearData = yearData;
     this.commonData = commonData;
     this.festivals = {};
-    for (const key in this.commonData.festivals) {
-      let arr = this.commonData.festivals[key];
-      if (this.yearData.festivals.hasOwnProperty(key)) {
+    for (const key in this.yearData.festivals) {
+      let arr = this.yearData.festivals[key];
+      if (this.commonData.festivals.hasOwnProperty(key)) {
         //包含
-        this.festivals[key] = [...arr, ...this.yearData.festivals[key]];
+        this.festivals[key] = [...arr, ...this.commonData.festivals[key]];
       } else {
         //不包含
+        this.festivals[key] = this.yearData.festivals[key];
+      }
+    }
+
+    // 遍历第二个对象的键，确保没有重复处理的键
+    for (const key in this.commonData.festivals) {
+      if (
+        this.commonData.festivals.hasOwnProperty(key) &&
+        !this.yearData.festivals.hasOwnProperty(key)
+      ) {
         this.festivals[key] = this.commonData.festivals[key];
       }
     }
