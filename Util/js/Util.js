@@ -1,70 +1,58 @@
 /**
- * JS下的Util工具类
+ * 【javascript语言】FestivalsUtil工具类
  */
-export default class Util {
+export default class FestivalsUtil {
   /**
    * 构造函数
-   * @param {Object} yearData 年的数据包
-   * @param {Object} common 公共的数据包
+   * @param {Object} festivalsData 节日信息数据包
+   * @param {Object} yearsData 每年休息/加班数据包
    */
-  constructor(yearData, commonData) {
-    this.yearData = yearData;
-    this.commonData = commonData;
-    this.festivals = {};
-    for (const key in this.yearData.festivals) {
-      let arr = this.yearData.festivals[key];
-      if (this.commonData.festivals.hasOwnProperty(key)) {
-        //包含
-        this.festivals[key] = [...arr, ...this.commonData.festivals[key]];
-      } else {
-        //不包含
-        this.festivals[key] = this.yearData.festivals[key];
-      }
-    }
-
-    // 遍历第二个对象的键，确保没有重复处理的键
-    for (const key in this.commonData.festivals) {
-      if (
-        this.commonData.festivals.hasOwnProperty(key) &&
-        !this.yearData.festivals.hasOwnProperty(key)
-      ) {
-        this.festivals[key] = this.commonData.festivals[key];
-      }
-    }
+  constructor(festivalsData, yearsData) {
+    this.festivalsData = festivalsData;
+    this.yearsData = yearsData;
   }
   /**
    * 指定日期是否上班
+   * @param {String} year 年，格式YYYY（如：2023）
    * @param {String} date 日期，格式MM-DD（如：01-01）
    * @return {boolean}
    */
-  getWork(date) {
-    let work = this.yearData.work;
-    return work.indexOf(date) !== -1;
+  getWork(year, date) {
+    if (this.yearsData.hasOwnProperty(year)) {
+      let work = this.yearsData[year].work;
+      return work.indexOf(date) !== -1;
+    }
+    return false;
   }
   /**
    * 指定日期是否休息
+   * @param {String} year 年，格式YYYY（如：2023）
    * @param {String} date 日期，格式MM-DD（如：01-01）
    * @return {boolean}
    */
-  getRest(date) {
-    let rest = this.yearData.rest;
-    return rest.indexOf(date) !== -1;
-  }
-  /**
-   * 获取指定日期节日名称(name)
-   * @param {String} date 日期，格式MM-DD（如：01-01）
-   * @return {Array}
-   */
-  getFestivalNameArray(date) {
-    if (!this.festivals[date]) return [];
-    return this.festivals[date].map((obj) => obj.name);
+  getRest(year, date) {
+    if (this.yearsData.hasOwnProperty(year)) {
+      let rest = this.yearsData[year].rest;
+      return rest.indexOf(date) !== -1;
+    }
+    return false;
   }
   /**
    * 获取指定日期节日列表
+   * @param {String} year 年，格式YYYY（如：2023）
    * @param {String} date 日期，格式MM-DD（如：01-01）
    * @return {Array}
    */
-  getFestivalArray(date) {
-    return this.festivals[date];
+  getFestivalArray(year, date) {
+    let arr = [];
+    for (let key in this.festivalsData) {
+      let obj = this.festivalsData[key];
+      if (obj.date && obj.date == date) {
+        arr.push(obj);
+      } else if (obj.dates && obj.dates.includes(year + "-" + date)) {
+        arr.push(obj);
+      }
+    }
+    return arr;
   }
 }
